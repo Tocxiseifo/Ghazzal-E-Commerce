@@ -1,7 +1,7 @@
 import { NavLinks } from "./NavLinks";
-import { MdOutlineShoppingCart } from "react-icons/md";
 import { MdOutlinePerson2 } from "react-icons/md";
 import { motion , useScroll } from "motion/react"
+import Cart from "./cart";
 
 
 export default function NavBar() {
@@ -25,7 +25,7 @@ export default function NavBar() {
                     </div>
                     <div className="flex gap-4 relative right-15">
                             <div  className="flex gap-5">
-                                <MdOutlineShoppingCart/>
+                                <Cart />
                                 <MdOutlinePerson2 />
                             </div>
                     </div>
