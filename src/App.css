@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-main: oklch(18.67% 0 0);
+  --color-brand-hover: oklch(82.16% 0.077 129.22);
+  --color-text-base: oklch(91.48% 0.004 39.48);
+  
+  --font-sahel: "sahel", sans-serif;
+}
+
+@font-face {
+  font-family: 'sahel';
+  src: url('./assets/Fonts/Sahel-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
