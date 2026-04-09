@@ -12,10 +12,10 @@ const CartBadge = styled(Badge)`
 `;
 
 export default function Cart() {
-    const {cart ,setCart} = useGhazzal()
+    const {cart} = useGhazzal()
     
   return (
-    <IconButton onClick={()=> setCart(Number(cart) + 1)}>
+    <IconButton >
       <ShoppingCartIcon fontSize="small"  className='text-white' />
       <CartBadge badgeContent={cart}  color='success' overlap="circular" />
     </IconButton>

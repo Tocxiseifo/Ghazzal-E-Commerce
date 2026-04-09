@@ -10,7 +10,7 @@ function App() {
   return (
     <Context.Provider value={{cart ,setCart}}>
       <NavBar />
-      <div className='w-full h-screen overflow-hidden'>
+      <div className='w-full h-auto overflow-hidden'>
         <AppRoutes />
       </div>
     </Context.Provider>
