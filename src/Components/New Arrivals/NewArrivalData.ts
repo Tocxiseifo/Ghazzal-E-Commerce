@@ -8,5 +8,29 @@ export const NewArrivals : productTypes[] = [
         price:'250.00',
         category:'sport wear',
         img:short
-    }
+    },
+    {
+        id:0,
+        name:'sport Short',
+        quantity:200,
+        price:'250.00',
+        category:'sport wear',
+        img:short
+    },
+    {
+        id:0,
+        name:'sport Short',
+        quantity:200,
+        price:'250.00',
+        category:'sport wear',
+        img:short
+    },
+    {
+        id:0,
+        name:'sport Short',
+        quantity:200,
+        price:'250.00',
+        category:'sport wear',
+        img:short
+    },
 ]

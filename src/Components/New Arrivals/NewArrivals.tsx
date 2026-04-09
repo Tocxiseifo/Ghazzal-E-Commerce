@@ -6,11 +6,11 @@ export default function NewArrival() {
     return(
         <>
             <section className="w-full h-[835px] bg-main flex flex-col gap-[64px] items-center  font-shale py-[128px] px-[48px]">
-                <div className="flex justify-between  w-[90%] items-center h-[81px]">
+                <div className="flex justify-between  w-[80%] items-center h-[81px]">
                     <span className="w-[280px] h-10 text-text-base leading-[40px] text-4xl uppercase font-sahel">New Arrivals</span>
                     <a href="#" className="text-brand-hover w-[120px] h-10 bg-transparent hover:underline transition-all duration-300 hover:duration-300 text-2xl font-sahel">See More</a>
                 </div>
-                <div className="w-[90%] flex gap-6 h-[430px]">
+                <div className="w-[90%] flex items-center justify-evenly gap-8 h-[430px]">
                     {NewArrivals.map((item) =>(
                         <div className="w-[278px] h-[485px] flex flex-col gap-6 items-start group relative hover:-translate-y-2 duration-300 transition-all hover:duration-300" key={item.id}>
                             <div className="border border-white/10 rounded-md bg-white/10 ">

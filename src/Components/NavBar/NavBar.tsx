@@ -12,11 +12,11 @@ export default function NavBar() {
         <>
             <nav className="w-full flex flex-col justify-between text-2xl text-center items-center font-sahel  h-[80px] bg-main uppercase text-text-base sticky top-0 z-50">
                 <div  className="flex w-full items-center justify-between mt-6">
-                    <div className="flex w-[100px] h-8">
+                    <div className="flex w-[180px] relative bottom-8 h-8">
                         <img src="" alt="" />
-                        <a className="text-[32px] ml-7 text-brand-hover">Ghazzal</a>
+                        <a className="text-[32px] ml-7 text-brand-hover"><img src="/src/assets/images/Document from Seif Ahmad (1).png" alt="" className="w-58 object-cover"  /></a>
                     </div>
-                    <div className="flex gap-8 text-[20px] text-lg">
+                    <div className="flex gap-8 text-[20px] mr-21 text-lg">
                         {NavLinks.slice(0,4).map((link)=>(
                             <div key={link.id}>
                                 <span className={HoverStyle}>{link.name}</span>
