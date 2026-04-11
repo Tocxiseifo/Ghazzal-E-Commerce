@@ -6,7 +6,7 @@ export default function CoreSystemSection() {
             <section className="w-full relative h-152   xl:h-[895px] px-[192px] py-[48px] bg-[#0E0E0E] ">
                 <span className="w-full hidden md:flex h-[320px]  leading-[320px] text-[320px] text-text-base/5 relative z-10 left-[960px] font-sahel">KINETIC</span>
                 {coreData.map((item) =>(
-                    <div className="flex flex-col items-start w-[768px] relative right-40 h-[371px] gap-6 lg:gap-[48px]">
+                    <div className="flex flex-col items-start w-[768px] relative right-40 lg:right-0 h-[371px] gap-6 lg:gap-[48px]">
                         <div className="w-[768px] h-[150px] items-start flex flex-col">
                             <span className="lg:text-7xl lg:w-[508px] w-100 h-[150px] text-left text-4xl md:leading-[75px] text-text-base font-sahel uppercase font-extrabold">{item.text}</span>
                         </div>

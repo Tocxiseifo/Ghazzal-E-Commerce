@@ -10,7 +10,7 @@ export const NewArrivals : productTypes[] = [
         img:short
     },
     {
-        id:0,
+        id:1,
         name:'sport Short',
         quantity:200,
         price:'250.00',
@@ -18,7 +18,7 @@ export const NewArrivals : productTypes[] = [
         img:short
     },
     {
-        id:0,
+        id:2,
         name:'sport Short',
         quantity:200,
         price:'250.00',
@@ -26,7 +26,7 @@ export const NewArrivals : productTypes[] = [
         img:short
     },
     {
-        id:0,
+        id:3,
         name:'sport Short',
         quantity:200,
         price:'250.00',

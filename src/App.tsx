@@ -1,4 +1,5 @@
 import NavBar from "./Components/NavBar/NavBar"
+import FooterSection from "../src/Components/Footer Section/FooterSection";
 import './App.css'
 import { Context } from "./Context/context"
 import { useState } from "react"
@@ -13,6 +14,7 @@ function App() {
       <div className='w-full h-auto overflow-hidden'>
         <AppRoutes />
       </div>
+      <FooterSection />
     </Context.Provider>
   )
 }

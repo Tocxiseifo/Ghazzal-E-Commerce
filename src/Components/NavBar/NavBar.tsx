@@ -1,7 +1,9 @@
 import { NavLinks } from "./NavLinks";
 import { MdOutlinePerson2 } from "react-icons/md";
 import { motion , useScroll } from "motion/react"
+
 import Cart from "./cart";
+import { Link } from "react-router";
 
 
 export default function NavBar() {
@@ -14,7 +16,7 @@ export default function NavBar() {
                 <div  className="flex w-full items-center justify-between mt-6">
                     <div className="flex w-[180px] relative bottom-8 h-8">
                         <img src="" alt="" />
-                        <a className="text-[32px] ml-7 text-brand-hover"><img src="/src/assets/images/Document from Seif Ahmad (1).png" alt="" className="w-58 object-cover"  /></a>
+                        <Link to={'/'} className="text-[32px] ml-7 text-brand-hover"><img src="/src/assets/images/Document from Seif Ahmad (1).png" alt="" className="w-58 object-cover"  /></Link>
                     </div>
                     <div className="flex gap-8 text-[20px] mr-21 text-lg">
                         {NavLinks.slice(0,4).map((link)=>(
