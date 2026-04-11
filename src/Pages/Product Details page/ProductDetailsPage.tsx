@@ -2,6 +2,9 @@ import { useParams } from "react-router"
 import useGhazzal from "../../Hooks/useGhazzal"
 import  { NewArrivals } from "../../Components/New Arrivals/NewArrivalData"
 import SizeCard from "./SizeCard"
+import Feature from "./Feature"
+import Suggestion from "./Suggestion"
+import Review from "./Reviews"
 
 export default function ProductDetailsPage() {
     //=============Hooks===============
@@ -10,13 +13,14 @@ export default function ProductDetailsPage() {
     const productId = param.productId
     return(
         <>
-            <section className="flex flex-col h-auto w-full bg-main">
+            <section className="flex flex-col h-auto w-full gap-[48px] bg-main">
                 {NewArrivals.filter(product => product.id === Number(productId)).map((product) =>(
-                    <div key={product.id} className="w-full h-[1200px] flex justify-center items-center">
-                        <div className="w-[747px] h-[1120px] bg-text-base"> 
-                            <img src={product.img} alt={product.name} className="w-[747px] h-[1120px] object-contain hover:scale-110 duration-300 transition-transform hover:duration-300" />
+                    <div key={product.id}>
+                    <div  className="w-full h-[930px] flex  justify-center items-center">
+                        <div className="w-[747px] h-[890px] relative bottom-5 bg-text-base"> 
+                            <img src={product.img} alt={product.name} className="w-[747px] h-[890px] object-contain hover:scale-110 duration-300 transition-transform hover:duration-300" />
                         </div>
-                        <div className="w-[533px] bg-[#1c1b1b] h-[1120px] px-16 flex justify-center items-center py-16">
+                        <div className="w-[533px] bg-[#1c1b1b] h-[890px] relative bottom-5 px-16 flex justify-center items-center py-16">
                             <div className="w-[405px] h-[806px] flex flex-col items-start gap-[15px]">
                                 <div className="flex w-[405px] h-[15px] gap-2 text-brand-hover items-center">
                                     <span className="w-8 h-px border"></span>
@@ -48,7 +52,7 @@ export default function ProductDetailsPage() {
                                     </div>
                                     <div className="w-[405px] h-[234px] gap-4 flex flex-col items-start">
                                         <div className="w-full h-[64px]">
-                                            <span className="text-5xl text-text-base font-black font-sahel leading-12 ">${product.price}</span>
+                                            <span className="text-5xl text-text-base font-black font-sahel leading-12">${product.price}</span>
                                         </div>
                                         <span className="bg-brand-hover text-hover w-full h-[68px] flex font-sahel items-center justify-center uppercase duration-300 transition-all hover:bg-brand-hover/40 cursor-pointer hover:text-brand-hover hover:duration-300" onClick={()=> setCart(Number(cart) + 1)}>Add to cart</span>
                                         <span className="bg-transparent border border-[#44483E] text-text-base w-full h-[68px] flex font-sahel items-center justify-center uppercase duration-300 transition-all hover:bg-white/15 cursor-pointer  hover:duration-300">RESERVE IN STORE</span>
@@ -57,9 +61,13 @@ export default function ProductDetailsPage() {
                             </div>
                         </div>
                     </div>
+                    <Feature name={product.name} />
+                    <Suggestion id={product.id} />
+                    <Review />
+                    </div>
                 ))}
             </section>
         </>
     )
-} /* Horizontal Divider */
+}
 
