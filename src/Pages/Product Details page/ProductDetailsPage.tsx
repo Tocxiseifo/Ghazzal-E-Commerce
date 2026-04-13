@@ -11,6 +11,16 @@ export default function ProductDetailsPage() {
     const {cart ,setCart} = useGhazzal()
     const param = useParams()
     const productId = param.productId
+
+    function handleAddToCart(Id: number | string) {
+        if (cart.some(item => item.id === Id)) {
+          setCart(prev => prev.filter(item => item.id !== Id));
+        } else {
+          const product = NewArrivals.find(product => product.id === Id);
+          if (!product) return;
+          setCart(prev => [...prev, product]);
+        }
+      }
     return(
         <>
             <section className="flex flex-col h-auto w-full gap-[48px] bg-main">
@@ -54,7 +64,7 @@ export default function ProductDetailsPage() {
                                         <div className="w-full h-[64px]">
                                             <span className="text-5xl text-text-base font-black font-sahel leading-12">${product.price}</span>
                                         </div>
-                                        <span className="bg-brand-hover text-hover w-full h-[68px] flex font-sahel items-center justify-center uppercase duration-300 transition-all hover:bg-brand-hover/40 cursor-pointer hover:text-brand-hover hover:duration-300" onClick={()=> setCart(Number(cart) + 1)}>Add to cart</span>
+                                        <span className="bg-brand-hover text-hover w-full h-[68px] flex font-sahel items-center justify-center uppercase duration-300 transition-all hover:bg-brand-hover/40 cursor-pointer hover:text-brand-hover hover:duration-300" onClick={() => handleAddToCart(product.id)}>Add to cart</span>
                                         <span className="bg-transparent border border-[#44483E] text-text-base w-full h-[68px] flex font-sahel items-center justify-center uppercase duration-300 transition-all hover:bg-white/15 cursor-pointer  hover:duration-300">RESERVE IN STORE</span>
                                     </div>
                                 </div>

@@ -1,8 +1,9 @@
 export interface productTypes {
     id:number | string,
     name:string,
-    quantity:number,
+    quantity?:number,
     price:string | number,
     category:string,
-    img:string
+    img:string,
+    size?:string
 }

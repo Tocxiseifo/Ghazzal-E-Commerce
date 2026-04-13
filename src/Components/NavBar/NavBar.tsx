@@ -28,7 +28,7 @@ export default function NavBar() {
                     <div className="flex gap-4 relative right-15">
                             <div  className="flex gap-5">
                                 <Cart />
-                                <span className="relative top-1"><MdOutlinePerson2 /></span>
+                                <span className="relative top-3"><MdOutlinePerson2 /></span>
                             </div>
                     </div>
                 </div>

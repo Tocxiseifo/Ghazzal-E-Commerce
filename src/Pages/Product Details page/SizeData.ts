@@ -1,23 +1,19 @@
 interface Sizes {
-    size:string,
+    size?:string,
     id:number | string
 }
 
 export const SizeData : Sizes[] =[
     {
-        id:0,
-        size:'s'
+        id:'s'
     },
     {
-        id:1,
-        size:'m'
+        id:'m'
     },
     {
-        id:2,
-        size:'l'
+        id:'l'
     },
     {
-        id:3,
-        size:'xl'
+        id:'xl'
     },
 ]

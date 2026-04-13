@@ -11,7 +11,9 @@ export default function NewArrival() {
                 </div>
                 <div className="lg:w-[90%] flex flex-col lg:flex-row items-center justify-evenly gap-8 h-[430px]">
                     {NewArrivals.map((item) =>(
-                       <Card img={item.img} id={item.id} name={item.name} price={item.price}  category={item.category}/>
+                        <div key={item.id}>
+                            <Card img={item.img}  id={item.id} name={item.name} price={item.price}  category={item.category}/>
+                        </div>
                     ))}
                 </div>
             </section>
