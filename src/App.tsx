@@ -9,7 +9,7 @@ import type { productTypes } from "./Types/productTypes";
 import ScrollToTop from "./Components/ui/ScrollToTop"; // استيراد المكون
 
 function App() {
-  //====================Cart State==================
+  //====================States==================
   const [cart,setCart] = useState<productTypes[]>([])
   const [chosenSize, setChosenSize] = useState<any | null>(null)
   
