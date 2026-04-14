@@ -7,7 +7,9 @@ export const NewArrivals : productTypes[] = [
         quantity:1,
         price:'250.00',
         category:'sport wear',
-        img:short
+        img:short,
+        color:'[#0E0E0E]',
+        size:'m'
     },
     {
         id:1,
@@ -15,7 +17,9 @@ export const NewArrivals : productTypes[] = [
         quantity:1,
         price:'250.00',
         category:'anyThing',
-        img:short
+        img:short,
+        color:'lime-950',
+        size:'sm'
     },
     {
         id:2,
@@ -23,7 +27,9 @@ export const NewArrivals : productTypes[] = [
         quantity:1,
         price:'250.00',
         category:'anyThing',
-        img:short
+        img:short,
+        color:'[#3D5229]',
+        size:'l'
     },
     {
         id:3,
@@ -31,6 +37,8 @@ export const NewArrivals : productTypes[] = [
         quantity:1,
         price:'250.00',
         category:'sport wear',
-        img:short
+        img:short,
+        color:'brand-hover',
+        size:'xl'
     },
 ]

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { SelectBody } from "C:/Users/xsnow/OneDrive/Desktop/Ghazzal-E-Commerce/src/Components/ui/SeclectBody.tsx";
 import  { NewArrivals } from "../../Components/New Arrivals/NewArrivalData";
 import Card from "@/Components/ui/Card";
@@ -8,14 +7,34 @@ import { useState } from "react";
 import ColorPallet from "./colorPallet";
 import { ColorPalletData } from "./ColorPalletData";
 import SizeCard from "../Product Details page/SizeCard";
+import useGhazzal from "@/Hooks/useGhazzal";
 
 export default function CollectionPage() {
+    //======================States===========================
     const [isChecked , setIsChecked] = useState<string>('all')
+    const [color , setColor] = useState<string>('all')
+
+    const {chosenSize , setChosenSize} = useGhazzal()
+
+    //================Handlers====================
     const handleOnChange = (id:string) => {
         setIsChecked(id);
     };
+    const handleColorChange = (colorName:string) => {
+        setColor(colorName);
+    };
+    console.log(color);
     // console.log(isChecked)
-    const filteredItems = isChecked === 'all' ? NewArrivals : NewArrivals.filter(item => item.category === isChecked) //to filtered the category
+    const handleReturnToDefault = () =>{
+        setColor('all')
+        setIsChecked('all')
+        setChosenSize(null)
+    }
+    const filteredItems =
+        NewArrivals
+            .filter(item => isChecked === 'all' || item.category === isChecked) // to filter the category
+            .filter(item => color === 'all' || item.color === color) // to filter the color
+            .filter(item => chosenSize === null || item.size === chosenSize )
     return(
         <>
             <main className="w-full h-auto bg-main flex flex-col items-center justify-center">
@@ -50,9 +69,15 @@ export default function CollectionPage() {
                             <div className="w-full h-[28px] text-lg text-text-base font-extrabold font-sahel leading-[28px] flex items-center justify-between uppercase"> 
                                 <span>color</span>
                                 <span className="w-[8.17px] h-[1.17px] text-[#8e9286] border"></span>
-                            </div>                            <div className="w-full h-[122px] flex flex-wrap gap-3">
-                                {ColorPalletData.map((color) =>(
-                                    <ColorPallet color={color.color} id={color.id} />
+                            </div>                            
+                            <div className="w-full h-[122px] flex flex-wrap gap-3">
+                                {ColorPalletData.map(({ id, color: colorName }) => (
+                                    <ColorPallet 
+                                        key={id}
+                                        color={colorName} 
+                                        isActive={color === colorName} // عشان اليوزر يعرف هو دايس على إيه
+                                        onClick={() => handleColorChange(colorName)} 
+                                    />
                                 ))}
 
                             </div>
@@ -66,6 +91,9 @@ export default function CollectionPage() {
                                 <SizeCard />
                             </div>
                         </div>
+                        <button className="w-full relative top-15 mt-[48px h-[47px] flex justify-center items-center px-4 bg-text-base duration-300 hover:duration-300 transition-all hover:bg-text-base/40 cursor-pointer " onClick={handleReturnToDefault}>
+                            RESET ALL FILTERS                               
+                        </button>
                     </div>
                     <div className="w-[864px] h-[1153px] gap-[128px]  flex flex-wrap items-center justify-center">
                         {filteredItems.map((item) =>(

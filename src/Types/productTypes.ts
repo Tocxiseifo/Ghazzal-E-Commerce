@@ -5,5 +5,6 @@ export interface productTypes {
     price:string | number,
     category:string,
     img:string,
-    size?:string
+    size?:string,
+    color:string
 }
