@@ -10,27 +10,27 @@ export const NavLinks : NavLink[] = [
     {
         id:1,
         name:'shop',
-        path:'/shop'
+        path:'/'
     },
     {
         id:2,
         name:'collection',
-        path:'/collection'
+        path:'collection'
     },
     {
         id:3,
         name:'community',
-        path:'/community'
+        path:'/'
     },
     {
         id:4,
         name:'labs',
-        path:'/labs'
+        path:'/'
     },
     {
         id:5,
         name:'Cart',
-        path:'/Cart',
+        path:'cart',
     },
     {
         id:6,

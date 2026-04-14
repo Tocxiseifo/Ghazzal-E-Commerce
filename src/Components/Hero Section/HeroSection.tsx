@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { heroData } from "./HeroSectionData";
 
 export default function HeroSection() {
@@ -12,7 +13,7 @@ export default function HeroSection() {
                         <span className="text-brand-hover  text-[165px] font-sahel">{data.text2}</span>
                         <p className="w-[576px] h-[64px] text-p-color relative bottom-12 font-sahel">{data.p}</p>
                         <div className="w-full uppercase h-[110px] items-start flex gap-5 ">
-                            <a href="#" className="w-[227px] h-[62px] font-sahel rounded-md bg-brand-hover text-center items-center justify-center flex font-extrabold text-hover text-lg leading-5 hover:bg-[#3d5229] duration-500 transition-all hover:duration-500 hover:text-brand-hover">Shop the drop</a>
+                            <Link to={'collection'}  className="w-[227px] h-[62px] font-sahel rounded-md bg-brand-hover text-center items-center justify-center flex font-extrabold text-hover text-lg leading-5 hover:bg-[#3d5229] duration-500 transition-all hover:duration-500 hover:text-brand-hover">Shop the drop</Link>
                             <a href="#" className={HoverEffect}><span className="relative rounded-md z-10 font-sahel">view film</span></a>
                         </div>
                     </div>

@@ -21,7 +21,7 @@ export default function NavBar() {
                     <div className="flex gap-8 text-[20px] mr-21 text-lg">
                         {NavLinks.slice(0,4).map((link)=>(
                             <div key={link.id}>
-                                <span className={HoverStyle}>{link.name}</span>
+                                <Link to={link.path} className={HoverStyle}>{link.name}</Link>
                             </div>
                         ))}
                     </div>
